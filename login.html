@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="login-form" action="login.php" method="POST">
+        <label for="usn">USN:</label>
+        <input type="text" id="usn" name="usn" required />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <button type="submit">Login</button>
+      </form>
+      <p id="error-message" class="error-message"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

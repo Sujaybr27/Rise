@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <div class="navbar-left">
+            <h1>Student Dashboard</h1>
+          </div>
+          <div class="navbar-right">
+            <div class="dropdown">
+              <img
+                src="profile-icon-design-free-vector.jpg"
+                alt="Student Photo"
+                class="avatar"
+                onclick="toggleDropdown()"
+              />
+              <div id="dropdown-menu" class="dropdown-menu">
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="flex-container">
+        <div class="flex-column">
+          <section id="student-details" class="flex-item">
+            <h2>Student Details</h2>
+            <p>Name: <span id="student-name"></span></p>
+            <p>Email: <span id="student-email"></span></p>
+            <p>Enrollment Number: <span id="student-enrollment"></span></p>
+            <p>Current Sem: <span id="student-semester"></span></p>
+            <p>Backlogs: <span id="student-backlogs"></span></p>
+            <p>Phone Number: <span id="student-phone"></span></p>
+            <p>CGPA: <span id="student-cgpa"></span></p>
+          </section>
+          <section id="placement-status" class="flex-item">
+            <h2>Placement Status</h2>
+            <p>Recruited: <span id="placement-status-text"></span></p>
+            <p>Company: <span id="company-name"></span></p>
+            <p>Position: <span id="position-name"></span></p>
+            <p>Package: <span id="package"></span></p>
+            <p>Recruited Date: <span id="recruited-date"></span></p>
+          </section>
+          <section id="internship-companies" class="flex-item">
+            <h2>Internship/Job History</h2>
+            <ul id="job-history-list"></ul>
+          </section>
+        </div>
+        <div class="flex-column">
+          <section id="search-courses">
+            <h2>Search Courses</h2>
+            <input
+              type="text"
+              id="course-search"
+              placeholder="Search for courses..."
+            />
+            <button onclick="searchCourses()">Search</button>
+            <ul id="course-results"></ul>
+          </section>
+        </div>
+        <div class="flex-column">
+          <section id="certifications" class="flex-item">
+            <h2>Completed Courses</h2>
+            <ul id="completed-courses-list"></ul>
+          </section>
+          <section id="ongoing-courses" class="flex-item">
+            <h2>Ongoing Courses</h2>
+            <ul id="ongoing-courses-list"></ul>
+          </section>
+          <section id="skills-dashboard" class="flex-item">
+            <h2>Skills Dashboard</h2>
+            <iframe
+              width="600"
+              height="450"
+              src="https://lookerstudio.google.com/embed/reporting/ef0189be-b525-4b1c-8f3d-e938e0c60e31/page/H6g3D"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+              sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+            ></iframe>
+          </section>
+        </div>
+      </div>
+      <footer>
+        <p>
+          &copy; 2024 ePortfolioManagement. All rights reserved. Contact us:
+          info@yourwebsite.com
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
